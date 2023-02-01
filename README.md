@@ -10,3 +10,5 @@ The directory "MD_Simulations" contains: (1)The initial structures of key HG-ser
 The directory "PRODA_Recapitulation" contains: (1)The parameter files, Script files, enzymes and ligands structures used in the recapitulation of five key HG-series mutants by PRODA and (2)the recapitulation results of the structures of HG3, HG3.3b, HG3.7, HG3.14 and HG3.17 by PRODA.
 
 The directory "PRODA_Redesign" contains: (1) The parameters files, Script file enzymes and ligands structures used in the computational redesign of HG3.17 by PRODA and (2)the PRODA-designed enzyme-TS complex structures of top-ranked 12 mutants in MD-based evaluations.  
+
+Moreover, other data, scripts or structures associated to this work will be available upon request to the author (zhuys@mail.buct.edu.cn). 
