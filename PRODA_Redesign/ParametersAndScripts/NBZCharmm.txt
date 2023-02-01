@@ -1,0 +1,47 @@
+RESI  NBZ
+ATOM   O8
+ATOM   O3
+ATOM   O1
+ATOM   N12
+ATOM   N2
+ATOM   C9
+ATOM   C7
+ATOM   C10
+ATOM   C4
+ATOM   C6
+ATOM   C5
+ATOM   C11
+ATOM   H16
+ATOM   H14
+ATOM   H15
+ATOM   H13
+DOUBLE  O8  N12
+DOUBLE  O8  C7
+DOUBLE  O3  N2
+BOND    O1  N2
+DOUBLE  N12  C11
+BOND    N2  C4
+DOUBLE  C9  C7
+DOUBLE  C9  C10
+DOUBLE  C9  C11
+DOUBLE  C7  C6
+DOUBLE  C10  C4
+BOND    C10  H16
+DOUBLE  C4  C5
+DOUBLE  C6  C5
+BOND    C6  H14
+BOND    C5  H15
+BOND    C11  H13
+IC  O8      C6      *C7      C9          0   0  -179.9  124.2    1.38
+IC  C9      C7       O8      N12         0   0    -0.0  104.0    1.68
+IC  C7      O8       N12     C11         0   0    -0.0  104.1    1.33
+IC  C7      C11     *C9      C10         0   0  -179.9  137.3    1.40
+IC  O8      C7       C6      C5          0   0   179.9  116.0    1.40
+IC  C7      C6       C5      C4          0   0     0.0  121.3    1.04
+IC  C10     C5      *C4      N2          0   0   179.9  119.5    1.42
+IC  C5      C4       N2      O1          0   0  -180.0  119.0    1.25
+IC  C5      C4       N2      O3          0   0     0.0  118.9    1.25
+IC  C9      N12     *C11     H13         0   0   179.9  118.8    1.56
+IC  C7      C5      *C6      H14         0   0   179.9  121.8    1.08
+IC  C6      C4      *C5      H15         0   0  -180.0  121.5    1.09
+IC  C9      C4      *C10     H16         0   0  -179.9  122.4    1.09

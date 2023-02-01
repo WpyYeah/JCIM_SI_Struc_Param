@@ -1,0 +1,41 @@
+PLACING  SEGA  GLN   47  GLN   
+
+CHECK_MULTI_CONS_BEGIN
+SEGA    GLN     47      SEGA   CYS    81
+SEGA    GLN     47      SEGA   GLU    43
+CHECK_MULTI_CONS_END
+
+LOAD     CG   CD   NE2
+
+VARIATE VAR0   DEGREE                  -180    179   10.0   
+VARIATE VAR1   DEGREE                 100    140    5.0
+VARIATE VAR2   ANGSTROM               2.7    3.4     0.1 
+CALC    CG   CD   NE2    #O8    0.0     0.0    VAR0   VAR1   VAR2
+
+VARIATE VAR3   DEGREE                 -180     179   10.0   
+VARIATE VAR4   DEGREE                   90     150     5.0   
+CALC      CD2   NE2   #O8    #C7     0.0     0.0     VAR3	VAR4    1.36
+
+VARIATE VAR5   DEGREE               -180    179   5.0     
+CALC    NE2   #O8    #C7     #C6      0.0    0.0    VAR5    126.3    1.39
+
+CALC  #O8      #C6      *#C7      #C9          0    0   -179.9  124.2    1.38
+CALC  #C9      #C7       #O8      #N12         0    0     -0.0  104.0    1.68
+CALC  #C7      #O8       #N12     #C11         0    0     -0.0  104.1    1.26
+CALC  #C7      #C11     *#C9      #C10         0    0   -179.8  137.3    1.40
+CALC  #O8      #C7       #C6      #C5          0    0    179.9  116.0    1.40
+CALC  #C7      #C6       #C5      #C4          0    0      0.0  121.3    1.40
+CALC  #C10     #C5      *#C4      #N2          0    0    179.8  119.5    1.42
+CALC  #C5      #C4       #N2      #O1          0    0   -179.9  118.9    1.25
+CALC  #C5      #C4       #N2      #O3          0    0      0.0  118.8    1.25
+CALC  #C9      #N12     *#C11     #H13         0    0    179.8  118.8    1.56
+
+CHECK_MULTI_CONS_BEGIN
+SEGA    ASP   124      NBZ   NBZ    0
+SEGA    MET   234       NBZ   NBZ    0
+CHECK_MULTI_CONS_END
+
+CHECK_VDW_INTERNAL    WITH_HYDROGEN    20
+CHECK_VDW_BACKBONE    WITH_HYDROGEN    8.0    5.0  
+
+

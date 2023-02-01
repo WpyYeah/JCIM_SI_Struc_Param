@@ -1,0 +1,16 @@
+NBZ	O8	O	N	NP2	 -0.1200     1.7000     -0.340  N12	 Y	 SP2	
+NBZ	O3	O	N	NP1	 -0.1200     1.7000	    -0.340  N2	 Y	 SP2	
+NBZ	O1	O	N	NP1  -0.1200     1.7000     -0.340  N2	 Y	 SP2	
+NBZ	N12	N	N	NP2	 -0.2000     1.8500     -0.480  C11	 Y	 SP2	
+NBZ	N2	N	N	NP1	 -0.2000     1.8500	     0.397  N	 N	 SP2	
+NBZ	C9	C	N	NP2	 -0.0990     1.8600     -0.113  N	 N	 SP2	
+NBZ	C7	C	N	NP2	 -0.0990     1.8600	     0.466  N	 N	 SP2	
+NBZ	C10	C	N	NP2	 -0.0700     1.9924	    -0.563  N	 N	 SP2	
+NBZ	C4	C	N	NP2	 -0.0700     1.9924	     0.122  N	 N	 SP2	
+NBZ	C6	C	N	NP2	 -0.0700     1.9924	    -0.299  N	 N	 SP2	
+NBZ	C5	C	N	NP2	 -0.0700     1.9924	    -0.264  N	 N	 SP2	
+NBZ	C11	C	N	NP2	 -0.0200     2.2000      0.240  N	 N	 SP2	
+NBZ	H16	H	N	NP2  -0.0300     1.3582      0.345  N	 N	 N	
+NBZ	H14	H	N	NP2  -0.0300     1.3582      0.240  N	 N	 N	
+NBZ	H15	H	N	NP2  -0.0300     1.3582      0.241  N	 N	 N	
+NBZ	H13	H	N	NP2	 -0.0460     0.9000	     0.170  N	 N	 N	     
