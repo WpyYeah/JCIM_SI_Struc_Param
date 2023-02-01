@@ -1,0 +1,103 @@
+! 这个CHARMM文件包含四种PATCH残基：NTER，CTER，PROP和GLYP，其中CTER的原子命名不同于原来的
+! CHARMM格式，原来C上的两个原子是OT1和OT2，这里改成了O和OXT。另外，相对于原来的CHARMM参数，这里
+! 为每一种PATCH上的氢原子提供了新的IC参数。
+
+PRES NTER        1.00 ! standard N-terminus
+GROUP                  ! use in generate statement
+ATOM N    NH3    -0.30 !
+ATOM HT1  HC      0.33 !         HT1	
+ATOM HT2  HC      0.33 !     (+)/
+ATOM HT3  HC      0.33 ! --CA--N--HT2
+ATOM CA   CT1     0.21 !   |    \
+ATOM HA   HB      0.10 !   HA    HT3
+DELETE ATOM HN   
+BOND HT1 N HT2 N HT3 N   
+DONOR HT1 N   
+DONOR HT2 N   
+DONOR HT3 N   
+! 新IC参照LYS给出
+IC C    CA   N   HT1   1.5350 110.4600 179.9200 110.0200  1.0404
+IC HT1  CA   *N  HT2   1.0404 110.0200  120.2700 109.5000  1.0402
+IC HT1  CA   *N  HT3   1.0404 110.0200 -120.1300 109.4000  1.0401
+
+PRES GLYP         1.00 ! Glycine N-terminus
+GROUP                  ! use in generate statement
+ATOM N    NH3    -0.30 !
+ATOM HT1  HC      0.33 !   HA1   HT1
+ATOM HT2  HC      0.33 !   | (+)/
+ATOM HT3  HC      0.33 ! --CA--N--HT2
+ATOM CA   CT2     0.13 !   |    \
+ATOM HA1  HB      0.09 !   HA2   HT3
+ATOM HA2  HB      0.09 !
+DELETE ATOM HN   
+BOND HT1 N HT2 N HT3 N   
+DONOR HT1 N   
+DONOR HT2 N   
+DONOR HT3 N   
+! 新IC参照LYS给出
+IC C    CA   N   HT1   1.5350 110.4600  179.9200 110.0200  1.0404
+IC HT1  CA   *N  HT2   1.0404 110.0200  120.2700 109.5000  1.0402
+IC HT1  CA   *N  HT3   1.0404 110.0200 -120.1300 109.4000  1.0401
+
+PRES PROP         1.00 ! Proline N-Terminal
+GROUP                  ! use in generate statement
+ATOM N    NP     -0.07 !   HA
+ATOM HN1  HC      0.24 !   |
+ATOM HN2  HC      0.24 !  -CA   HN1
+ATOM CD   CP3     0.16 !  /  \ /
+ATOM CA   CP1     0.16 !      N(+)
+ATOM HA   HB      0.09 !     / \
+ATOM HD1  HA      0.09 !  -CD   HN2
+ATOM HD2  HA      0.09 !   | \
+BOND HN1 N HN2 N       !  HD1 HD2
+DONOR HN1 N   
+DONOR HN2 N   
+! 新IC的二面角仍为原PATCH中的二面角，键长键角参照LYS
+IC  CA  CD  *N  HN1  0.0000  0.0000  120.0000  109.5000  1.0400
+IC  CA  CD  *N  HN2  0.0000  0.0000 -120.0000  109.5000  1.0400
+
+
+PRES CTER        -1.00 ! standard C-terminus
+GROUP                  ! use in generate statement
+ATOM C    CC      0.34 !   OXT(-)
+ATOM O    OC     -0.67 !  /
+ATOM OXT  OC     -0.67 ! -C
+DELETE ATOM O          !  \\
+BOND C O               !   O
+DOUBLE  C OXT
+IMPR O CA OXT C   
+ACCEPTOR OT1 C   
+ACCEPTOR OT2 C
+! 二面角仍取180度，键长键角参照GLU   
+IC N    CA   C    O     0.0000  0.0000  180.0000  114.9900  1.2590
+IC O    CA   *C   OXT   0.0000  0.0000  180.0000  120.0800  1.2532
+
+PRES PSER              ! catalytic serine, do not have atom HG1
+ATOM   OG
+DELETE ATOM HG1
+
+PRES PLYS              ! catalytic serine, do not have atom HZ2 and HZ3
+ATOM   NZ
+DELETE ATOM HZ2
+DELETE ATOM HZ3
+
+PRES  WATA
+ATOM  OW
+ATOM  HW1
+ATOM  HW2
+BOND  OW HW1
+BOND  OW HW2
+IC CA    C       O    OW    0.0000  0.0000  101.03    129.22    2.831
+IC C     O      OW   HW1    0.0000  0.0000  134.19     98.08   0.9572
+IC C     O      OW   HW2    0.0000  0.0000  -48.67     11.35   0.9572
+ 
+PRES  WATB
+ATOM  OW
+ATOM  HW1
+ATOM  HW2
+BOND  OW HW1
+BOND  OW HW2
+IC CA    C       O    OW    0.0000  0.0000   109.25     83.70    5.284
+IC C     O      OW   HW1    0.0000  0.0000    71.34     46.81   0.9572
+IC C     O      OW   HW2    0.0000  0.0000  -166.28     85.32   0.9572
+END

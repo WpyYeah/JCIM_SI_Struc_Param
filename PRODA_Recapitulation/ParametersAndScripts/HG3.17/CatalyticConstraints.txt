@@ -1,0 +1,45 @@
+SITEPAIR    SEGA      ASP     124      NBZ     NBZ     0
+GROUP       ASP         NBZ
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE     #H13  OD2          --      --      1.6    2.2
+ITEM        ANGLE       #H13  OD2    CG    --      90   130
+ITEM        ANGLE       #C11  #H13   OD2   --          150    180
+ITEM        TORSION     CB    CG     OD2    #H13       -30      30
+
+SITEPAIR    SEGA      MET     234      NBZ     NBZ     0
+GROUP       MET         NBZ
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE     #O1    N          --      --     2.6    3.2 
+ITEM        ANGLE       #N2    #O1    HN  --     100  140
+ITEM        ANGLE      #O1    HN   N    --       150   180
+GROUP       MET         NBZ
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE     #O3    N          --      --     2.6    3.2 
+ITEM        ANGLE       #N2    #O3    HN  --     100  140
+ITEM        ANGLE      #O3    HN   N    --       150   180
+
+SITEPAIR    SEGA      GLN     47      SEGA     CYS     81
+GROUP       GLN         ALA
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE    OE1   #N       --      --       2.6     3.5    
+ITEM        ANGLE      CD    OE1  #HN  --    80.0    160.0 
+ITEM        ANGLE       OE1  #HN  #N     --      135   180   
+
+SITEPAIR    SEGA      GLN     47      SEGA     GLU     43
+GROUP       GLN         GLU
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE     NE2    #O          --      --       2.6     3.5    
+ITEM        ANGLE       NE2    HE22   #O  --    135   180 
+ITEM        ANGLE       HE22  #O   #C     --      80.0    160.0  
+GROUP       GLN         ALA
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE     NE2    #O          --      --       2.6     3.5    
+ITEM        ANGLE       NE2    HE21   #O  --    135   180 
+ITEM        ANGLE       HE21  #O   #C     --      80.0    160.0  
+
+SITEPAIR    SEGA      GLN     47      NBZ     NBZ     0
+GROUP       GLN         NBZ
+!Keyword    Type        Atom1   Atom2   Atom3   Atom4   Min     Max
+ITEM        DISTANCE    NE2     #O8       --      --     2.6    3.2    
+ITEM        ANGLE       NE2     HE21     #O8       --    150     180
+ITEM        ANGLE       HE21     #O8     #C7       --    100     140

@@ -1,0 +1,28 @@
+ATOMPARAM   AllResidueAtomParameter.txt
+ATOMPARAM   ../SmallMol/NBZAtomParameter.txt
+
+TOPOLOGY   top_all22_prot.inp
+TOPOLOGY   SupplementaryICForProtein.txt
+TOPOLOGY   ../SmallMol/NBZCharmm.txt
+
+SEQUENCE   5RGC_Sequence.txt
+
+COORDINATE  SEGA   5RGC_Processed.pdb
+COORDINATE  NBZ    ../SmallMol/NBZ.pdb
+
+ROTAMER   rotlib11810.txt   DesignSchemeForPlacing.txt
+ROTAMER   rotlib11810.txt   DesignSchemeForGenerateSequence.txt
+
+CRYSTAL_ROTAMER
+ROTAMER_EXPANSION
+
+SMALLMOL_ROTAMER              CatalyticConstraints.txt   NBZPlacingRule.txt
+SMALLMOL_ROTAMER_WRITE        NBZRotamerLibrary.pdb
+
+SMALLMOL_ROTAMER_READ        NBZRotamerLibrary.pdb
+ENERGY_MATRIX  .  CatalyticConstraints.txt
+
+DESIGN_MULTI_SOLUTION_NUM 1
+DESIGN_ROTAMER_NUM_DIFFERENT_FROM_WT -1
+DESIGN  .    Null.txt  DesignSitesForGenerateSequence.txt  
+EXIT
